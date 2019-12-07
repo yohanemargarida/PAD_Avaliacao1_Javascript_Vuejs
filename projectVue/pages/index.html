@@ -8,36 +8,37 @@
     <script src=""></script>
 </head>
 <body>
-    <div id="busca">
-
+    <div id="busca"> 
+        <p v-for="nome in tatuadores">{{ tatuadores.text}}</p>
 
     </div>
 
     <script>
-        var tatuadores = [
-        {
-            id: 1,
-            name: “Yohane Braga”,
-            website: “http://www.yohane.com.br”,
-            city: “Rio de Janeiro”
-        },
-        {
-            id: 2,
-            name: “Brian Gomes”,
-            website: “http://www.instagram.com/briangomes/”,
-            city: “São Paulo”
-        },
-        {   
-            id: 3,
-            name: “Chiquinho Gomes”,
-            website: “https://www.instagram.com/chiquinhogtattoo”,
-            city: “São Paulo”
-        }
-]
+        
 
         var busca = new Vue({
             el:'#busca',
             data: {
+                tatuadores: [
+                {
+                    id: 1,
+                    name: “Yohane Braga”,
+                    instagram: “http://www.yohane.com.br”,
+                    city: “Rio de Janeiro”
+                },
+                {
+                    id: 2,
+                    name: “Brian Gomes”,
+                    instagram: “http://www.instagram.com/briangomes/”,
+                    city: “São Paulo”
+                },
+                {   
+                    id: 3,
+                    name: “Chiquinho Gomes”,
+                    instagram: “https://www.instagram.com/chiquinhogtattoo”,
+                    city: “São Paulo”
+                }
+            ]
 
             },
             methods: {
